@@ -1,6 +1,11 @@
-id,username,password,name
-1,user1,pass1,สมชาย ใจดี
-2,user2,pass2,สมหญิง แสนสุข
-3,user3,pass3,อนันต์ พัฒนกิจ
-4,user4,pass4,กมลวรรณ ศรีสุข
-5,user5,pass5,ชัยวัฒน์ มั่งมี
+id,username,password,name,reject_count
+1,user1,pass1,สมชาย ใจดี,1
+2,user2,pass2,สมหญิง แสนสุข,0
+3,user3,pass3,อนันต์ พัฒนกิจ,2
+4,user4,pass4,กมลวรรณ ศรีสุข,0
+5,user5,pass5,ชัยวัฒน์ มั่งมี,1
+6,user6,pass6,พรทิพย์ แก้วใส,0
+7,user7,pass7,ธีรภัทร รุ่งเรือง,0
+8,user8,pass8,สุชาดา ศิริพงษ์,3
+9,user9,pass9,วิทยา ตั้งมั่น,0
+10,user10,pass10,จิราภา บุญเลิศ,1
