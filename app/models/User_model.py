@@ -30,11 +30,20 @@ class UserModel:
                 return r
         return None
     
+    def list_users(self):
+        return self.store.read_all()
+
     # เพิ่ม reject count ของ user
     def increment_reject(self, user_id: int):
         rows = self.store.read_all()
         for r in rows:
             if int(r["id"]) == user_id:
                 r["reject_count"] = str(int(r.get("reject_count","0")) + 1)
-                break
         self.store.write_all(rows)
+
+    def get_rejects_by_user(self, user_id: int) -> int:
+        rows = self.store.read_all()
+        for r in rows:
+            if int(r["id"]) == user_id:
+                return int(r.get("reject_count","0"))
+        return 0

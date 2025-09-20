@@ -22,7 +22,7 @@ class UserMenuView(BaseView):
             btn_frame.pack(pady=8)
             ttk.Button(btn_frame, text="Detail", command=self.on_detail).pack(side="left", padx=4)
             ttk.Button(btn_frame, text="Support", command=self.on_to_read).pack(side="left", padx=4)
-            ttk.Button(btn_frame, text="Stat", command=self.show_stats).pack(pady=6)
+            ttk.Button(btn_frame, text="Stats", command=lambda: controller.show_user_stats()).pack(side="left", padx=4)
 
       def set_rows(self, rows):
             for i in self.table.get_children():

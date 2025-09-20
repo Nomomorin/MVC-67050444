@@ -6,7 +6,7 @@ from app.models.Pledge_model import PledgeModel
 from app.models.Reward_Model import RewardModel
 from app.views.main_menu_view import MainMenuView
 from app.views.user_menu_view import UserMenuView
-from app.views.stats_view import StatsView
+from app.views.stats_view import UserStatsView
 from app.views.read_view import ReadView
 from app.views.login_liew import LoginView
 from app.views.detail_view import DetailView
@@ -40,7 +40,7 @@ class MainController(tk.Tk):
             (ReadView, "read"),
             (LoginView, "login"),
             (DetailView, "detail"),
-            (StatsView, "stats")
+            (UserStatsView, "userstats")
         ]:
             frame = V(container, self)
             self.frames[name] = frame
@@ -120,9 +120,13 @@ class MainController(tk.Tk):
         frame.set_rows(rows)
 
     #--- สถิติ --- ของ user
-    def show_stats(self):
-        total_success = len(self.Pledge_model.list_items())   
-        total_rejects = self.User_model.get_total_rejects()  
+    def show_user_stats(self):
+        user_id = int(self.current_user["id"])
 
-        self.frames["stats"].set_stats(total_success, total_rejects)
-        self.show_page("stats")
+        pledges = self.Pledge_model.list_items_by_user_id(user_id)
+        total_success = len(pledges)
+        total_amount = sum(p.amount for p in pledges)
+        total_rejects = self.User_model.get_rejects_by_user(user_id)
+
+        self.frames["userstats"].set_stats(total_success, total_rejects, total_amount)
+        self.show_page("userstats")
