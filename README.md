@@ -1,6 +1,6 @@
-# MVC Tkinter Crowdfunding App
+# MVC EXITEXAM App
 
-โปรแกรมตัวอย่างระบบ **Crowdfunding** ที่สร้างด้วย **Python + Tkinter** โดยใช้สถาปัตยกรรม **MVC (Model-View-Controller)**  
+สร้างด้วย **Python + Tkinter** โดยใช้สถาปัตยกรรม **MVC (Model-View-Controller)**  
 จัดเก็บข้อมูลด้วย **CSV** และใช้ **dataclass** จัดการโครงสร้างข้อมูล
 
 
