@@ -125,27 +125,5 @@ Password: pass1
 
 
 .
-├── run.py                         # Entry point ของระบบ
-├── app/
-│   ├── controllers/
-│   │   └── main_controller.py     # Controller หลัก
-│   ├── models/
-│   │   ├── project_model.py       # ProjectModel
-│   │   ├── user_model.py          # UserModel
-│   │   ├── pledge_model.py        # PledgeModel
-│   │   └── reward_model.py        # RewardModel
-│   ├── services/
-│   │   └── csv_store.py           # จัดการอ่าน/เขียน CSV
-│   └── views/
-│       ├── base_view.py           # BaseView
-│       ├── login_view.py          # LoginView
-│       ├── main_menu_view.py      # MainMenuView
-│       ├── read_view.py           # ReadView
-│       ├── detail_view.py         # DetailView
-│       ├── user_menu_view.py      # UserMenuView
-│       └── user_stats_view.py     # UserStatsView
-
-
-
 
 
